@@ -1,5 +1,9 @@
 #[cfg(feature = "timer")]
-use tokio_timer::{throttle::Throttle, Timeout};
+use tokio_timer::{
+    debounce::{Debounce, DebounceBuilder, Edge},
+    throttle::Throttle,
+    timeout::Timeout,
+};
 
 use futures::Stream;
 
@@ -21,6 +25,36 @@ pub use util::enumerate::Enumerate;
 ///
 /// [`timeout`]: #method.timeout
 pub trait StreamExt: Stream {
+    /// Debounce the stream on the trailing edge using the given duration.
+    ///
+    /// Errors will pass through without being debounced. Debouncing will
+    /// happen on the trailing edge. This means all items (except the last
+    /// one) will be discarded until the delay has elapsed without an item
+    /// being passed through. The last item that was passed through will
+    /// be returned.
+    ///
+    /// See also [`debounce_builder`], which allows more configuration over how the
+    /// debouncing is done.
+    ///
+    /// [`debounce_builder`]: #method.debounce_builder
+    fn debounce(self, dur: Duration) -> Debounce<Self>
+    where Self:Sized
+    {
+        self.debounce_builder()
+            .duration(dur)
+            .edge(Edge::Trailing)
+            .build()
+    }
+
+    /// Create a builder that builds a debounced version of this stream.
+    ///
+    /// The returned builder can be used to configure the debouncing process.
+    fn debounce_builder(self) -> DebounceBuilder<Self>
+    where Self:Sized
+    {
+        DebounceBuilder::from_stream(self)
+    }
+
     /// Throttle down the stream by enforcing a fixed delay between items.
     ///
     /// Errors are also delayed.
