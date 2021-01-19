@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611059815795,
+  "lastUpdate": 1611059853054,
   "repoUrl": "https://github.com/NeoLegends/tokio",
   "entries": {
     "sync_rwlock": [
@@ -159,6 +159,92 @@ window.BENCHMARK_DATA = {
             "name": "yield_many",
             "value": 20865049,
             "range": "± 2601079",
+            "unit": "ns/iter"
+          }
+        ]
+      }
+    ],
+    "sync_mpsc": [
+      {
+        "commit": {
+          "author": {
+            "email": "heng@cantab.net",
+            "name": "Henry Gomersall",
+            "username": "hgomersall"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5402c948eebbb4c6c695e156d68ce495a43ea81a",
+          "message": "io: clarify AsyncFd docs about changes of the inner fd (#3430)",
+          "timestamp": "2021-01-17T21:39:58+01:00",
+          "tree_id": "63ed16dcd34c11314b7bda2dcb983946b5669a1e",
+          "url": "https://github.com/NeoLegends/tokio/commit/5402c948eebbb4c6c695e156d68ce495a43ea81a"
+        },
+        "date": 1611059852133,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "contention_bounded",
+            "value": 6669004,
+            "range": "± 3666411",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_bounded_full",
+            "value": 6372660,
+            "range": "± 2222667",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_unbounded",
+            "value": 5935782,
+            "range": "± 2805707",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_000_medium",
+            "value": 850,
+            "range": "± 172",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_medium",
+            "value": 820,
+            "range": "± 166",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_1_medium",
+            "value": 796,
+            "range": "± 198",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_large",
+            "value": 137831,
+            "range": "± 21870",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_medium",
+            "value": 1543,
+            "range": "± 404",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_bounded",
+            "value": 1003230,
+            "range": "± 276939",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_unbounded",
+            "value": 667287,
+            "range": "± 154015",
             "unit": "ns/iter"
           }
         ]
