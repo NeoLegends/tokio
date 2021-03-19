@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611059853054,
+  "lastUpdate": 1616158819893,
   "repoUrl": "https://github.com/NeoLegends/tokio",
   "entries": {
     "sync_rwlock": [
@@ -53,6 +53,60 @@ window.BENCHMARK_DATA = {
             "name": "read_uncontended",
             "value": 565,
             "range": "± 45",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ivanppetkov@gmail.com",
+            "name": "Ivan Petkov",
+            "username": "ipetkov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e4f76688a00fa2ce81ab6c074700995095c29e1e",
+          "message": "runtime: fix memory leak/growth when creating many runtimes (#3564)",
+          "timestamp": "2021-03-16T19:31:46+01:00",
+          "tree_id": "a2ea19402b796f1f9c30a7c32611c83240a6fbfb",
+          "url": "https://github.com/NeoLegends/tokio/commit/e4f76688a00fa2ce81ab6c074700995095c29e1e"
+        },
+        "date": 1616158818879,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "read_concurrent_contended",
+            "value": 1085,
+            "range": "± 120",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_contended_multi",
+            "value": 17195,
+            "range": "± 5525",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended",
+            "value": 1128,
+            "range": "± 53",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended_multi",
+            "value": 16669,
+            "range": "± 8296",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_uncontended",
+            "value": 584,
+            "range": "± 43",
             "unit": "ns/iter"
           }
         ]
