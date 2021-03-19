@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1616158831514,
+  "lastUpdate": 1616158850174,
   "repoUrl": "https://github.com/NeoLegends/tokio",
   "entries": {
     "sync_rwlock": [
@@ -401,6 +401,90 @@ window.BENCHMARK_DATA = {
             "name": "uncontented_unbounded",
             "value": 667287,
             "range": "± 154015",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ivanppetkov@gmail.com",
+            "name": "Ivan Petkov",
+            "username": "ipetkov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e4f76688a00fa2ce81ab6c074700995095c29e1e",
+          "message": "runtime: fix memory leak/growth when creating many runtimes (#3564)",
+          "timestamp": "2021-03-16T19:31:46+01:00",
+          "tree_id": "a2ea19402b796f1f9c30a7c32611c83240a6fbfb",
+          "url": "https://github.com/NeoLegends/tokio/commit/e4f76688a00fa2ce81ab6c074700995095c29e1e"
+        },
+        "date": 1616158848783,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "contention_bounded",
+            "value": 6214021,
+            "range": "± 2116791",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_bounded_full",
+            "value": 6108716,
+            "range": "± 2012755",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_unbounded",
+            "value": 6217003,
+            "range": "± 2525632",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_000_medium",
+            "value": 819,
+            "range": "± 137",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_medium",
+            "value": 844,
+            "range": "± 98",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_1_medium",
+            "value": 814,
+            "range": "± 113",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_large",
+            "value": 127001,
+            "range": "± 11522",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_medium",
+            "value": 1737,
+            "range": "± 233",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_bounded",
+            "value": 1068579,
+            "range": "± 211293",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_unbounded",
+            "value": 736769,
+            "range": "± 95856",
             "unit": "ns/iter"
           }
         ]
