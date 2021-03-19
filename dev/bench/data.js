@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1616158828781,
+  "lastUpdate": 1616158831514,
   "repoUrl": "https://github.com/NeoLegends/tokio",
   "entries": {
     "sync_rwlock": [
@@ -267,6 +267,54 @@ window.BENCHMARK_DATA = {
             "name": "yield_many",
             "value": 20865049,
             "range": "± 2601079",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ivanppetkov@gmail.com",
+            "name": "Ivan Petkov",
+            "username": "ipetkov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e4f76688a00fa2ce81ab6c074700995095c29e1e",
+          "message": "runtime: fix memory leak/growth when creating many runtimes (#3564)",
+          "timestamp": "2021-03-16T19:31:46+01:00",
+          "tree_id": "a2ea19402b796f1f9c30a7c32611c83240a6fbfb",
+          "url": "https://github.com/NeoLegends/tokio/commit/e4f76688a00fa2ce81ab6c074700995095c29e1e"
+        },
+        "date": 1616158828379,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "chained_spawn",
+            "value": 200089,
+            "range": "± 40889",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "ping_pong",
+            "value": 748475,
+            "range": "± 178225",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "spawn_many",
+            "value": 5147526,
+            "range": "± 799310",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "yield_many",
+            "value": 21608780,
+            "range": "± 2919187",
             "unit": "ns/iter"
           }
         ]
